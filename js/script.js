@@ -36,11 +36,11 @@ let dipendenti = [
 
 for (i=0; i<=dipendenti.length; i++){
     console.log(dipendenti[i]);
+    let list = document.getElementById('dipendenti')
+    let div = document.createElement('div');
     for( let key in dipendenti[i]){
         console.log(dipendenti[i][key]);
-        let list = document.getElementById('dipendenti')
-        let div = document.createElement('div');
-        div.innerHTML = (dipendenti[i][key]) 
+        div.innerHTML = dipendenti[i]['nome'] + dipendenti[i]['ruolo'] + '<img src=".//img/' + dipendenti[i]['image'] + '" alt="Immagine dipendente">'
         list.appendChild(div)
     }
 
