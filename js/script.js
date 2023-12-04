@@ -33,3 +33,8 @@ let dipendenti = [
         'image': 'barbara-ramos-graphic-designer.jpg'
     },   
 ]
+
+for (i=0; i<=dipendenti.length; i++){
+    console.log(dipendenti[i])
+
+}
