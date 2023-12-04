@@ -39,16 +39,7 @@ for (i=0; i<=dipendenti.length; i++){
     let nome = document.querySelectorAll('.nome')
     let ruolo = document.querySelectorAll('.ruolo')
     let imagex = document.querySelectorAll('.imagex')
-
-    // let div = document.createElement('div');
-    for( let key in dipendenti[i]){
-        console.log(dipendenti[i][key]);
-        nome[i].innerHTML = dipendenti[i]['nome'] 
-        ruolo[i].innerHTML = dipendenti[i]['ruolo'] 
-        imagex[i].innerHTML = '<img src=".//img/' + dipendenti[i]['image'] + '" alt="Immagine dipendente">'
-        
-        // + dipendenti[i]['ruolo'] + '<img src=".//img/' + dipendenti[i]['image'] + '" alt="Immagine dipendente">'
-        // list.appendChild(div)
-    }
-
+    nome[i].innerHTML = dipendenti[i]['nome'] 
+    ruolo[i].innerHTML = dipendenti[i]['ruolo'] 
+    imagex[i].innerHTML = '<img src=".//img/' + dipendenti[i]['image'] + '" alt="Immagine dipendente">'
 }
