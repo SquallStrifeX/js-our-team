@@ -35,6 +35,13 @@ let dipendenti = [
 ]
 
 for (i=0; i<=dipendenti.length; i++){
-    console.log(dipendenti[i])
+    console.log(dipendenti[i]);
+    for( let key in dipendenti[i]){
+        console.log(dipendenti[i][key]);
+        let list = document.getElementById('dipendenti')
+        let div = document.createElement('div');
+        div.innerHTML = (dipendenti[i][key]) 
+        list.appendChild(div)
+    }
 
 }
