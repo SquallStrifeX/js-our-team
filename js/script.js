@@ -34,12 +34,17 @@ let dipendenti = [
     },   
 ]
 
-for (i=0; i<=dipendenti.length; i++){
+for (i=0; i<dipendenti.length; i++){
     console.log(dipendenti[i]);
-    let nome = document.querySelectorAll('.nome')
-    let ruolo = document.querySelectorAll('.ruolo')
-    let imagex = document.querySelectorAll('.imagex')
-    nome[i].innerHTML = dipendenti[i]['nome'] 
-    ruolo[i].innerHTML = dipendenti[i]['ruolo'] 
-    imagex[i].innerHTML = '<img src=".//img/' + dipendenti[i]['image'] + '" alt="Immagine dipendente">'
-}
+    let completo = document.getElementById('tutto')
+    let div = document.createElement('div')
+    completo.appendChild(div);
+    div.classList.add('col-4')
+    div.innerHTML = `<div>
+      <div class="imagex">
+      '<img src="./img/${dipendenti[i].image}" alt="Immagine dipendente">'</div>
+      <div class="card-body">
+        <h5 class="card-title nome text-center ">${dipendenti[i].nome}</h5>
+        <p class="card-text text-center ruolo">${dipendenti[i].ruolo}</p>
+        </div>
+      </div>`}
